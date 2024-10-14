@@ -1,0 +1,10 @@
+google-cloud-aiplatform
+langchain-core 
+langchain-google-vertexai
+pandasai
+pandasai[langchain]
+pandasai[excel]
+numpy==1.26.4
+openpyxl
+streamlit
+python-dotenv
