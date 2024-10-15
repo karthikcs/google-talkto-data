@@ -3,12 +3,19 @@ import pandas as pd
 from pandasai import SmartDatalake, Agent
 from langchain_google_vertexai import ChatVertexAI
 from dotenv import load_dotenv
+import vertexai
 
 load_dotenv()
 
 
 class logistics_data:
     def __init__(self, file_name="logistics.xlsx"):
+
+        PROJECT_ID = "digitalpractice"  # @param {type:"string"}
+        REGION = "us-central1"  # @param {type:"string"}
+        
+        # Initialize Vertex AI SDK
+        vertexai.init(project=PROJECT_ID, location=REGION)
 
         self.llm = ChatVertexAI(
             model="gemini-1.5-flash-001",
